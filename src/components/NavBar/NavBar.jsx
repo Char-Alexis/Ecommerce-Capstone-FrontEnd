@@ -34,8 +34,8 @@ const NavBar = ({ user }) => {
               Login
             </a>
             {/* <a class="nav-item nav-link" href="#">
-              Cart
-            </a> */}
+                Cart
+              </a> */}
           </div>
         </div>
       </nav>

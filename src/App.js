@@ -2,6 +2,8 @@ import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
 import jwtDecode from "jwt-decode";
 import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/Home";
+import Products from "./components/Products/Products";
 
 function App() {
   // componentDidMount() {
@@ -21,9 +23,10 @@ function App() {
   return (
     <div>
       <NavBar />
+      <Home />
       <Registration />
       <Login />
-      {/* <Products /> */}
+      <Products {...props} productList={this.state.products} />
     </div>
   );
 }
