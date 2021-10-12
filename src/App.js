@@ -1,34 +1,132 @@
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
-import jwtDecode from "jwt-decode";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
-import Products from "./components/Products/Products";
+// import Products from "./components/Products/Products";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import React, { Component } from "react";
+import axios from "axios";
+import jwtDecode from "jwt-decode";
+import Products from "./components/ProductListing/Products";
+import ReviewForm from "./components/ReviewForm/ReviewsForm";
+import RoutineBuilder from "./components/RoutineBuilder/RoutineBuilder";
 
-function App() {
-  // componentDidMount() {
-  //   const jwt = localStorage.getItem("token");
-  //   this.getAllProducts();
-  //   try {
-  //     const user = jwtDecode(jwt);
-  //     this.setState({
-  //       user: user,
-  //     });
-  //     console.log(this.state.products);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+      review: [],
+    };
+  }
 
-  return (
-    <div>
-      <NavBar />
-      <Home />
-      <Registration />
-      <Login />
-      <Products {...props} productList={this.state.products} />
-    </div>
-  );
+  componentDidMount() {
+    const jwt = localStorage.getItem("token");
+    try {
+      const user = jwtDecode(jwt);
+      this.setState({ user });
+    } catch {}
+  }
+  // Register user
+  userRegister = async (registeredUser) => {
+    let response = await axios.post(
+      "http://127.0.0.1:8000/api/auth/register/",
+      registeredUser
+    );
+    console.log(response.data);
+    if (response === undefined) {
+      this.setState({});
+    } else {
+      this.setState({
+        registeredUser: response.data,
+      });
+    }
+  };
+
+  // Login
+  getCredentials = async (credentials) => {
+    try {
+      let response = await axios.post(
+        "https://localhost:44394/api/authentication/login/",
+        credentials
+      );
+    } catch {
+      console.log("Unsuccessful Login");
+    }
+  };
+
+  // Get all products
+  async getAllProducts() {
+    let response = await axios.get("");
+    this.setState({
+      products: response.data,
+    });
+  }
+
+  render() {
+    const jwt = localStorage.getItem("token");
+    function getUser() {
+      try {
+        const user = jwtDecode(jwt);
+        return user;
+      } catch {}
+    }
+
+    const user = getUser();
+
+    return (
+      <div>
+        <BrowserRouter>
+          <NavBar />
+          <Home />
+          <Route exact path="/register" component={Registration} />
+          <Route exact path="/login" component={Login} />
+          <Products productList={this.state.products} />
+          <Route exact path="/detalis/:id" details={this.state.products} />
+          <Login path="/login" getCredentials={this.getCredentials} />
+
+          <ReviewForm commentId={this.state.review} />
+          <RoutineBuilder />
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
 
 export default App;
+
+// const [token, setToken] = useState([]);
+// const [user, setUser] = useState([]);
+// const [registerUser, setRegisterUser] = useState([]);
+// const [logIn, setLoginIn] = useState([]);
+
+// useEffect(() => {
+//   retrieveToken();
+// });
+
+// let retrieveToken = () => {
+//   const jwt = localStorage.getItem("token");
+//   if (jwt !== null) {
+//     try {
+//       let user = jwtDecode(jwt);
+
+// let registeredUser = async (user) => {
+//   try {
+//     let response = await axios.post(
+//       "http://127.0.0.1:8000/api/auth/register/",
+//       user
+//     );
+//
+// componentDidMount() {
+//   const jwt = localStorage.getItem("token");
+//   this.getAllProducts();
+//   try {
+//     const user = jwtDecode(jwt);
+//     this.setState({
+//       user: user,
+//     });
+//     console.log(this.state.products);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }

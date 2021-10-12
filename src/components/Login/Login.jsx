@@ -8,8 +8,8 @@ class Login extends Component {
     this.state = {
       username: "",
       password: "",
-      jwt: null,
-      register: false,
+      // jwt: null,
+      // register: false,
     };
   }
 
@@ -27,55 +27,45 @@ class Login extends Component {
     this.props.getCredentials(credentials);
   };
 
-  navToRegister = (event) => {
-    if (this.state.register == false) {
-      this.state.register = true;
-    } else {
-      this.state.register = false;
-    }
-    this.setState({ register: this.state.register });
-  };
-
   render() {
     return (
       <div>
-        {this.state.register ? (
-          <Registration
-            register={this.state.register}
-            navToRegister={this.navToRegister}
-          />
-        ) : (
-          <div class="main">
-            <div class="col-md-6 col-sm-12">
-              <div class="login-form">
-                <form>
-                  <div class="form-group">
-                    <label>Username</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="User Name"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Password</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Password"
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-black">
-                    Login
-                  </button>
-                  <button type="submit" class="btn btn-secondary">
-                    Register
-                  </button>
-                </form>
-              </div>
+        <div class="main">
+          <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+              <form onSubmit={this.handleSubmit}>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    onChange={this.handleChange}
+                    value={this.state.username}
+                    class="form-control"
+                    placeholder="User Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    onChange={this.handleChange}
+                    value={this.state.password}
+                    class="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-black">
+                  Login
+                </button>
+                <button type="submit" class="btn btn-secondary">
+                  Register
+                </button>
+              </form>
             </div>
           </div>
-        )}
+        </div>
       </div>
     );
   }

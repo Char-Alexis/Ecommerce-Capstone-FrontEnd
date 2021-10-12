@@ -1,4 +1,6 @@
+import axios from "axios";
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Products = (props) => {
   return (
@@ -6,7 +8,7 @@ const Products = (props) => {
       <table class="table table-striped table-dark">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Name:</th>
             <th>Category</th>
             <th>Price</th>
             <th>Description</th>
@@ -22,9 +24,9 @@ const Products = (props) => {
                 <td>{product.price}</td>
                 <td>{product.description}</td>
                 <td>
-                  {/* <Link to={`/details/${product.productId}`}>
+                  <Link to={`/details/${product.productId}`}>
                     Product Details
-                  </Link> */}
+                  </Link>
                 </td>
               </tr>
             );
