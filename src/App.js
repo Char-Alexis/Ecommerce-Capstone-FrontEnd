@@ -18,6 +18,7 @@ class App extends Component {
       products: [],
       review: [],
     };
+    this.getProducts = this.getProducts.bind(this);
   }
 
   componentDidMount() {
@@ -26,6 +27,7 @@ class App extends Component {
       const user = jwtDecode(jwt);
       this.setState({ user });
     } catch {}
+    this.getProducts();
   }
   // Register user
   userRegister = async (registeredUser) => {
@@ -47,7 +49,7 @@ class App extends Component {
   getCredentials = async (credentials) => {
     try {
       let response = await axios.post(
-        "https://localhost:44394/api/authentication/login/",
+        "http://127.0.0.1:8000/api/store/user/",
         credentials
       );
     } catch {
@@ -56,8 +58,10 @@ class App extends Component {
   };
 
   // Get all products
-  async getAllProducts() {
+  async getProducts() {
+    console.log("hi");
     let response = await axios.get("http://127.0.0.1:8000/api/store/product/");
+    console.log(response.data);
     this.setState({
       products: response.data,
     });
@@ -78,31 +82,46 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div>
-            {/* <Switch> */}
             <NavBar />
             <Home />
-            <Route exact path="/register" component={Registration} />
-            <Route
-              path="/products"
-              render={(props) => (
-                <ProductsListing {...props} productList={this.state.products} />
-              )}
-              // component={ProductListing}
-            />
-            <Route
-              exact
-              path="/detalis/:id"
-              render={(props) => (
-                <ProductDetails {...props} details={this.state.products} />
-              )}
-              // details={this.state.products}
-            />
-            <Login path="/login" getCredentials={this.getCredentials} />
+            <Switch>
+              <Route exact path="/register" component={Registration} />
+              <Route
+                path="/products"
+                render={(props) => (
+                  <ProductsListing
+                    {...props}
+                    productList={this.state.products}
+                  />
+                )}
+                // component={ProductListing}
+              />
+              <Route
+                exact
+                path="/details/:id"
+                render={(props) => (
+                  <ProductDetails {...props} details={this.state.products} />
+                )}
+                // details={this.state.products}
+              />
+              <Route
+                path="/login"
+                render={(props) => (
+                  <Login {...props} getCredentials={this.getCredentials} />
+                )}
+              />
+              <Route
+                path="/reviews"
+                render={(props) => (
+                  <ReviewForm {...props} productId={this.state.review} />
+                )}
+              />
+              <Route
+                path="/routine"
+                render={(props) => <RoutineBuilder {...props} />}
+              />
+            </Switch>
             {/* <Route exact path="/login" component={Login} /> */}
-
-            <ReviewForm path="reviews" productId={this.state.review} />
-            <RoutineBuilder path="routine" />
-            {/* </Switch> */}
           </div>
         </BrowserRouter>
       </div>
@@ -136,7 +155,7 @@ export default App;
 //
 // componentDidMount() {
 //   const jwt = localStorage.getItem("token");
-//   this.getAllProducts();
+//   this.getProducts();
 //   try {
 //     const user = jwtDecode(jwt);
 //     this.setState({

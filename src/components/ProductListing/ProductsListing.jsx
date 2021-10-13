@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ProductsListing = (props) => {
   return (
     <React.Fragment>
-      <table class="table table-striped table-dark">
+      <table class="table ">
         <thead>
           <tr>
             <th>Name</th>
@@ -18,15 +18,15 @@ const ProductsListing = (props) => {
           {props.productList.map((product) => {
             console.log(product);
             return (
-              <tr key={product.product_id}>
+              <tr key={product.id}>
                 <td>{product.product_name}</td>
                 <td>{product.category}</td>
                 <td>{product.price}</td>
                 <td>{product.description}</td>
                 <td>
-                  <Link to={`/details/${product.productId}`}>
-                    Product Details
-                  </Link>
+                  <Link to={`/details/${product.id}`}>Product Details</Link>
+                  {/* <button>Add Review</button> */}
+                  {/* <button onClick={addItem(props.product)}>Add to Cart</button> */}
                 </td>
               </tr>
             );

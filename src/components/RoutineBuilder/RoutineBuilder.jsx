@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const RoutineBuilder = () => {
-  const [question, setQuestion] = useState(1);
+  // const [question, setQuestion] = useState(1);
 
   return (
     <div>
