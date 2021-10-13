@@ -2,14 +2,14 @@ import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
-// import Products from "./components/Products/Products";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import React, { Component } from "react";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-import Products from "./components/ProductListing/Products";
 import ReviewForm from "./components/ReviewForm/ReviewsForm";
 import RoutineBuilder from "./components/RoutineBuilder/RoutineBuilder";
+import ProductsListing from "./components/ProductListing/ProductsListing";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 class App extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ class App extends Component {
 
   // Get all products
   async getAllProducts() {
-    let response = await axios.get("");
+    let response = await axios.get("http://127.0.0.1:8000/api/store/product/");
     this.setState({
       products: response.data,
     });
@@ -77,16 +77,33 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <NavBar />
-          <Home />
-          <Route exact path="/register" component={Registration} />
-          <Route exact path="/login" component={Login} />
-          <Products productList={this.state.products} />
-          <Route exact path="/detalis/:id" details={this.state.products} />
-          <Login path="/login" getCredentials={this.getCredentials} />
+          <div>
+            {/* <Switch> */}
+            <NavBar />
+            <Home />
+            <Route exact path="/register" component={Registration} />
+            <Route
+              path="/products"
+              render={(props) => (
+                <ProductsListing {...props} productList={this.state.products} />
+              )}
+              // component={ProductListing}
+            />
+            <Route
+              exact
+              path="/detalis/:id"
+              render={(props) => (
+                <ProductDetails {...props} details={this.state.products} />
+              )}
+              // details={this.state.products}
+            />
+            <Login path="/login" getCredentials={this.getCredentials} />
+            {/* <Route exact path="/login" component={Login} /> */}
 
-          <ReviewForm commentId={this.state.review} />
-          <RoutineBuilder />
+            <ReviewForm path="reviews" productId={this.state.review} />
+            <RoutineBuilder path="routine" />
+            {/* </Switch> */}
+          </div>
         </BrowserRouter>
       </div>
     );

@@ -8,7 +8,7 @@ function ProductDetails(props) {
 
   useEffect(async () => {
     await axios
-      .get(`https://localhost:44394/api/product/${params.id}`)
+      .get(`http://127.0.0.1:8000/api/store/product/${params.id}`)
       .then((res) => {
         setProduct(res.data);
       })
@@ -31,7 +31,7 @@ function ProductDetails(props) {
         </thead>
         <tbody>
           <tr>
-            <td>{product.product}</td>
+            <td>{product.product_name}</td>
             <td>{product.category}</td>
             <td>{product.price}</td>
             <td>{product.description}</td>

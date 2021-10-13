@@ -17,7 +17,7 @@ const ReviewForm = (props) => {
 
   async function fetchReviews() {
     await axios
-      .get(`http://127.0.0.1:8000/api/store/review/${props.commentId}`)
+      .get(`http://127.0.0.1:8000/api/store/review/${props.productId}`)
       .then((response) => {
         setCreateReview(response.data);
       });
@@ -49,7 +49,7 @@ const ReviewForm = (props) => {
           name="text"
           className="form-control"
           onInput={handleChange}
-          value={getReviews.text}
+          value={getReviews.comment}
         />
         <button type="submit" className="btn btn-dark btn-sm">
           Post
