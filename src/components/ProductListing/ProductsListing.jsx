@@ -26,7 +26,7 @@ const ProductsListing = (props) => {
                 <td>
                   <Link to={`/details/${product.id}`}>Product Details</Link>
                   {/* <button>Add Review</button> */}
-                  {/* <button onClick={addItem(props.product)}>Add to Cart</button> */}
+                  <button>Add to Cart</button>
                 </td>
               </tr>
             );

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Registration.css";
+// import Register from '../Register/Register';
+
 
 const Registration = ({ registerUser }) => {
   const [firstName, setFirstName] = useState();
@@ -10,7 +12,10 @@ const Registration = ({ registerUser }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    registerUser.registerUser(firstName, lastName, email, username, password);
+    const data = {first_name: firstName, last_name: lastName, email, username, password};
+    registerUser(data);
+    // this.props.navToRegister();
+
   };
   return (
     <div>

@@ -1,4 +1,6 @@
 /* body {
   background-image: url(/src/components/Images/home.jpg);
-  background-size: 115em;
+  background-size: 90em;
+  resize: horizontal;
+  justify-content: center;
 } */

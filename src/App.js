@@ -10,7 +10,10 @@ import ReviewForm from "./components/ReviewForm/ReviewsForm";
 import RoutineBuilder from "./components/RoutineBuilder/RoutineBuilder";
 import ProductsListing from "./components/ProductListing/ProductsListing";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
-
+import AddToCart from "./components/AddToCart.jsx/AddToCart";
+import Cart from "./components/Cart/Cart"
+// import AccountDetails from "./components/AccountDetails/AccountDetails";
+// import Delivery from "./components/Delivery/Delivery"
 class App extends Component {
   constructor(props) {
     super(props);
@@ -31,6 +34,7 @@ class App extends Component {
   }
   // Register user
   userRegister = async (registeredUser) => {
+    console.log(registeredUser)
     let response = await axios.post(
       "http://127.0.0.1:8000/api/auth/register/",
       registeredUser
@@ -40,7 +44,7 @@ class App extends Component {
       this.setState({});
     } else {
       this.setState({
-        registeredUser: response.data,
+        user: response.data,
       });
     }
   };
@@ -49,9 +53,22 @@ class App extends Component {
   getCredentials = async (credentials) => {
     try {
       let response = await axios.post(
-        "http://127.0.0.1:8000/api/store/user/",
+        "http://127.0.0.1:8000/api/auth/login/",
         credentials
       );
+      console.log(response)
+     
+      this.setState({
+        user: {
+          username: credentials.username,
+          access:response.data.access
+
+        }
+
+      });
+      localStorage.setItem("username", credentials.username)
+      localStorage.setItem("access", response.data.access)
+
     } catch {
       console.log("Unsuccessful Login");
     }
@@ -68,24 +85,17 @@ class App extends Component {
   }
 
   render() {
-    const jwt = localStorage.getItem("token");
-    function getUser() {
-      try {
-        const user = jwtDecode(jwt);
-        return user;
-      } catch {}
-    }
-
-    const user = getUser();
-
+    console.log(this.state.user)
     return (
       <div>
         <BrowserRouter>
           <div>
             <NavBar />
-            <Home />
             <Switch>
-              <Route exact path="/register" component={Registration} />
+            <Route exact path='/' component={Home} />
+              <Route exact path="/register" >
+                <Registration registerUser={this.userRegister} />
+                </Route>
               <Route
                 path="/products"
                 render={(props) => (
@@ -120,6 +130,23 @@ class App extends Component {
                 path="/routine"
                 render={(props) => <RoutineBuilder {...props} />}
               />
+              <Route
+                path="/addproducts"
+                render={(props) => <AddToCart {...props} />}
+              />
+               <Route
+                path="/addcart"
+                render={(props) => <Cart {...props} />}
+              />
+              
+              {/* <Route
+                path="/delivery"
+                render={(props) => <Delivery {...props} />}
+              /> */}
+              {/* <Route
+                path="/account"
+                render={(props) => <AccountDetails {...props} />}
+              /> */}
             </Switch>
             {/* <Route exact path="/login" component={Login} /> */}
           </div>
