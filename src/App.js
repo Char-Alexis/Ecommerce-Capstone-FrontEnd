@@ -12,6 +12,7 @@ import ProductsListing from "./components/ProductListing/ProductsListing";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import AddToCart from "./components/AddToCart/AddToCart";
 import SuccessPage from "./components/SuccessPage/SucessPage";
+import ViewCart from "./components/ViewCart/ViewCart";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
 // import Delivery from "./components/Delivery/Delivery"
 class App extends Component {
@@ -139,10 +140,20 @@ class App extends Component {
                 path="/addtocart"
                 render={(props) => <AddToCart {...props} />}
               />
+              <Route
+                path="/viewcart"
+                render={(props) => <ViewCart {...props} />}
+              />
+              {/* <Route
+                path="/checkout"
+                render={(props) => <Checkout {...props} />}
+              /> */}
                <Route
                 path="/success"
                 render={(props) => <SuccessPage {...props} />}
               />
+
+              
               {/* <Route
                 path="/delivery"
                 render={(props) => <Delivery {...props} />}

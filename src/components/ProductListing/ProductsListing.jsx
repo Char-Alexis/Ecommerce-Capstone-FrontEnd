@@ -17,6 +17,16 @@ const ProductsListing = (props) => {
         <tbody>
           {props.productList.map((product) => {
             console.log(product);
+            const onClickAddToCart = async () => {
+              console.log(`Adding Product(${product.id}) To Cart`)
+              await axios.post("http://127.0.0.1:8000/api/store/cart/", {
+                product_id: product.id,
+                quantity: 1,
+                username: localStorage.getItem("username"),
+                price: product.price
+              })
+
+            }
             return (
               <tr key={product.id}>
                 <td>{product.product_name}</td>
@@ -26,7 +36,7 @@ const ProductsListing = (props) => {
                 <td>
                   <Link to={`/details/${product.id}`}>View</Link>
                   {/* <button>Add Review</button> */}
-                  <button>Add to Cart</button>
+                  <button onClick={onClickAddToCart}>Add to Cart</button>
                 </td>
               </tr>
             );
