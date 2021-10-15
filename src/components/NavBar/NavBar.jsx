@@ -34,6 +34,11 @@ const NavBar = ({ username }) => {
                 Login
               </a>
             </Link>
+             <Link as={Link} to="/addtocart">
+              <a className="nav-item nav-link" href="/login">
+                Cart
+              </a>
+            </Link>
 
             {/* <a className="nav-item nav-link" href="#">
                 Cart

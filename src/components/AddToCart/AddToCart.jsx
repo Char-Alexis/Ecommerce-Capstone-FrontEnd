@@ -2,16 +2,16 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import ProductsListing from '../ProductListing/ProductsListing';
  
-const Cart = () => {
-    const [products, setProducts]=useState()
+const Cart = (props) => {
+    const [products, setProducts]=useState([]);
+    const [checkout, setCheckout] = useState()
 
     useEffect(() =>{
-        loadProducts();
-    })
+        loadProducts(props.user);
+    },[loadProducts])
 
-    const loadProducts= async () =>{
-        const result = await axios.get("http://127.0.0.1:8000/api/store/cart/")
-        setProducts(result.data);
+    const loadProducts= async (user) =>{
+        await axios.get(`http://127.0.0.1:8000/api/store/cart/${user.id}`).then(response=>(setProducts(response.data)))
         
     }
     return (
@@ -28,7 +28,7 @@ const Cart = () => {
                 </html>
         </div>
     )
-}
+};
 
 export default Cart
 

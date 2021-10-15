@@ -11,21 +11,15 @@ const ReviewForm = (props) => {
 
   useEffect(() => {
     fetchReviews();
-  }, [getReviews, createReview]);
+  }, [getReviews]);
 
-  useEffect(() => {}, [getReviews, createReview]);
 
   async function fetchReviews() {
     await axios
-      // .get(`http://127.0.0.1:8000/api/store/review/${props.productId}/`)
       .get(`http://127.0.0.1:8000/api/store/review/get/${props.productId}/`)
       .then((response) => {
         setCreateReview(response.data);
       });
-    setGetReviews({
-      ...getReviews,
-      product_id: props.productId,
-    });
   }
 
   const handleChange = (event) => {
@@ -38,10 +32,10 @@ const ReviewForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://127.0.0.1:8000/api/store/review", getReviews);
+    console.log(getReviews)
+    axios.post("http://127.0.0.1:8000/api/store/review/", getReviews);
   };
 
-  console.log(createReview);
   return (
     <div className="reviews">
       <form onSubmit={handleSubmit} className="form">
@@ -56,7 +50,7 @@ const ReviewForm = (props) => {
           Post
         </button>
       </form>
-      {createReview.map((createReview) => (
+      {createReview && createReview.map((createReview) => (
         <div>{createReview.comment}</div>
       ))}
     </div>

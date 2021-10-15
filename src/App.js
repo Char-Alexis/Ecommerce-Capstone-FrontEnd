@@ -10,8 +10,7 @@ import ReviewForm from "./components/ReviewForm/ReviewsForm";
 import RoutineBuilder from "./components/RoutineBuilder/RoutineBuilder";
 import ProductsListing from "./components/ProductListing/ProductsListing";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
-import AddToCart from "./components/AddToCart.jsx/AddToCart";
-import Cart from "./components/Cart/Cart"
+import AddToCart from "./components/AddToCart/AddToCart";
 import SuccessPage from "./components/SuccessPage/SucessPage";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
 // import Delivery from "./components/Delivery/Delivery"
@@ -135,13 +134,10 @@ class App extends Component {
                 path="/routine"
                 render={(props) => <RoutineBuilder {...props} />}
               />
-              <Route
-                path="/addproducts"
-                render={(props) => <AddToCart {...props} />}
-              />
+            
                <Route
-                path="/addcart"
-                render={(props) => <Cart {...props} />}
+                path="/addtocart"
+                render={(props) => <AddToCart {...props} />}
               />
                <Route
                 path="/success"
