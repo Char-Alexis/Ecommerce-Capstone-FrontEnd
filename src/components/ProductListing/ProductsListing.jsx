@@ -24,7 +24,7 @@ const ProductsListing = (props) => {
                 <td>{product.price}</td>
                 <td>{product.description}</td>
                 <td>
-                  <Link to={`/details/${product.id}`}>Product Details</Link>
+                  <Link to={`/details/${product.id}`}>View</Link>
                   {/* <button>Add Review</button> */}
                   <button>Add to Cart</button>
                 </td>

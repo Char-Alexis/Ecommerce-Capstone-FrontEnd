@@ -15,6 +15,7 @@ const Registration = ({ registerUser }) => {
     const data = {first_name: firstName, last_name: lastName, email, username, password};
     registerUser(data);
     // this.props.navToRegister();
+    this.props.history.push("/login");
 
   };
   return (

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ user }) => {
+const NavBar = ({ username }) => {
   return (
     <React.Fragment>
-      {user && <h5> Welcome {user.username} </h5>}
+      {username && <h5> Welcome {username.username} </h5>}
+      
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
           Logo

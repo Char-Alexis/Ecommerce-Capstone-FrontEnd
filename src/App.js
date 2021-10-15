@@ -12,6 +12,7 @@ import ProductsListing from "./components/ProductListing/ProductsListing";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import AddToCart from "./components/AddToCart.jsx/AddToCart";
 import Cart from "./components/Cart/Cart"
+import SuccessPage from "./components/SuccessPage/SucessPage";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
 // import Delivery from "./components/Delivery/Delivery"
 class App extends Component {
@@ -84,6 +85,10 @@ class App extends Component {
     });
   }
 
+  async addToCart() {
+    let response = await axios.get("http://127.0.0.1:8000/api/store/product/");
+    console.log(response.data)
+  }
   render() {
     console.log(this.state.user)
     return (
@@ -138,7 +143,10 @@ class App extends Component {
                 path="/addcart"
                 render={(props) => <Cart {...props} />}
               />
-              
+               <Route
+                path="/success"
+                render={(props) => <SuccessPage {...props} />}
+              />
               {/* <Route
                 path="/delivery"
                 render={(props) => <Delivery {...props} />}
