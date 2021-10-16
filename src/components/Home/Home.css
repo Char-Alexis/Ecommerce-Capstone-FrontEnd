@@ -4,3 +4,8 @@
   resize: horizontal;
   justify-content: center;
 } */
+
+img {
+  height: 1200px;
+  justify-content: center;
+}
