@@ -26,12 +26,12 @@ function ViewCart(props) {
 
     return (
         <div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">{cartProducts.productName}</li>
-                <li class="list-group-item">{cartProducts.price}</li>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item">{cartProducts.productName}</li>
+                <li className="list-group-item">{cartProducts.price}</li>
                 <li><StripeCheckout stripeKey="pk_test_51JiRtyCwgXG48Eq1UB7ZXpPx4BXL5QtPhXQ43Lzl5bDuTvXpca4jevTkklfNu8HkX7KVKfJwhondnCbfE3GBnknQ00aAbu7lGK"
                 token={handleToken}
-                class="list-group-item"
+                className="list-group-item"
                 totalPrice={cartProducts.price} /></li>
 
             </ul>

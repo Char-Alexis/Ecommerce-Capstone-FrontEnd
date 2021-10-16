@@ -21,7 +21,7 @@ function ProductDetails(props) {
     console.log("product", product);
     return (
       <div>
-        <table class="table table-striped table-dark">
+        <table className="table table-striped table-dark">
           <thead>
             <tr>
               <th>Product </th>

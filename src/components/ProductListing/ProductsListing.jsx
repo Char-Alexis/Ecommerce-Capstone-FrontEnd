@@ -22,7 +22,7 @@ const ProductsListing = (props) => {
             }
             return (
              <div className="row" > 
-             <div class="col-sm-12">
+             <div className="col-sm-12">
               <tr key={product.id}>
                 <p>Name: {product.product_name}</p>
                 <p>Description: {product.description}</p>

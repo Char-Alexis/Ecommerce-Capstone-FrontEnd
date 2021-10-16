@@ -8,7 +8,7 @@ const NavBar = ({ username }) => {
       
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
-          Logo
+          Kind to Skin Co
         </a>
        
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">

@@ -20,36 +20,36 @@ const Registration = ({ registerUser }) => {
   };
   return (
 
-            <section class="signup">
-            <div class="container">
-                <div class="signup-content">
-                    <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
-                        <form onSubmit={handleSubmit} class="register-form" id="register-form">
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <section className="signup">
+            <div className="container">
+                <div className="signup-content">
+                    <div className="signup-form">
+                        <h2 className="form-title">Sign up</h2>
+                        <form onSubmit={handleSubmit} className="register-form" id="register-form">
+                            <div className="form-group">
+                                <label for="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" value = { firstName } onChange={(event) => setFirstName(event.target.value)} placeholder="Your First Name"/>
                             </div>
-                            <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <div className="form-group">
+                                <label for="email"><i className="zmdi zmdi-email"></i></label>
                                 <input type="email" value = { lastName } onChange={(event) => setLastName(event.target.value)} placeholder="Your Last Name"/>
                             </div>
-                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                             <div className="form-group">
+                                <label for="email"><i className="zmdi zmdi-email"></i></label>
                                 <input type="email" value = { username } onChange={(event) => setUsername(event.target.value)} placeholder="Username"/>
                             </div>
-                            <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            <div className="form-group">
+                                <label for="pass"><i className="zmdi zmdi-lock"></i></label>
                                 <input type="password" value = { password } onChange={(event) => setPassword(event.target.value)} placeholder="Password"/>
                             </div>
                             
-                            <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            <div className="form-group form-button">
+                                <input type="submit" name="signup" id="signup" className="form-submit" value="Register"/>
                             </div>
                         </form>
                     </div>
-                    <div class="signup-image">
-                        <a href="/login" class="signup-image-link">I am already member</a>
+                    <div className="signup-image">
+                        <a href="/login" className="signup-image-link">I am already member</a>
                     </div>
                 </div>
             </div>

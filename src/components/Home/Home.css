@@ -9,3 +9,14 @@ img {
   height: 1200px;
   justify-content: center;
 }
+
+header{
+  font-size: 110px;
+  color: #475146;
+  font-family: 'Karla', sans-serif;
+  justify-content: center;
+  /* margin-right: 10em; */
+  margin-left: 5em;
+
+  
+}
