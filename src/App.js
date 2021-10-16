@@ -15,6 +15,7 @@ import SuccessPage from "./components/SuccessPage/SucessPage";
 import ViewCart from "./components/ViewCart/ViewCart";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
 // import Delivery from "./components/Delivery/Delivery"
+import Checkout from "./components/Checkout/Checkout";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -144,10 +145,10 @@ class App extends Component {
                 path="/viewcart"
                 render={(props) => <ViewCart {...props} />}
               />
-              {/* <Route
+              <Route
                 path="/checkout"
                 render={(props) => <Checkout {...props} />}
-              /> */}
+              />
                <Route
                 path="/success"
                 render={(props) => <SuccessPage {...props} />}
