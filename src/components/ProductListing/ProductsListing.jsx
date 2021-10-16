@@ -1,20 +1,13 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { Card } from "react-bootstrap"
 
 const ProductsListing = (props) => {
   return (
-    <React.Fragment>
-      <table class="table ">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
+      <Card style={{ width: '18rem'}} >
+        <Card.Body>
+        <div className="wrapper">
           {props.productList.map((product) => {
             console.log(product);
             const onClickAddToCart = async () => {
@@ -28,23 +21,27 @@ const ProductsListing = (props) => {
 
             }
             return (
-              
+             <div className="row" > 
+             <div class="col-sm-12">
               <tr key={product.id}>
-                <td>{product.product_name}</td>
-                <td>{product.category}</td>
-                <td>{product.price}</td>
-                <td>{product.description}</td>
-                <td>
-                  <Link to={`/details/${product.id}`}>View</Link>
-                  {/* <button>Add Review</button> */}
-                  <button onClick={onClickAddToCart}>Add to Cart</button>
-                </td>
+                <p>Name: {product.product_name}</p>
+                <p>Description: {product.description}</p>
+                <p>Category: {product.category}</p>
+                <p>$ {product.price}</p>
+                <p>
+                  <NavLink to={`/details/${product.id}`} activeStyle={{color:"green", textDecoration:"none"}}>View</NavLink>
+                  
+                  <button type = "button" class="btn btn-light" onClick={onClickAddToCart}>Add to Cart</button>
+                </p>
               </tr>
+              </div>
+          </div>
             );
           })}
-        </tbody>
-      </table>
-    </React.Fragment>
+        </div>
+          </Card.Body>
+
+        </Card>
   );
 };
 
