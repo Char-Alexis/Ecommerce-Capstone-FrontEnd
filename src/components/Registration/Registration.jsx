@@ -19,41 +19,76 @@ const Registration = ({ registerUser }) => {
 
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="firstName"
-          value={firstName}
-          onChange={(event) => setFirstName(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="lastName"
-          value={lastName}
-          onChange={(event) => setLastName(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="username"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+
+            <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form onSubmit={handleSubmit} class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" value = { firstName } onChange={(event) => setFirstName(event.target.value)} placeholder="Your First Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" value = { lastName } onChange={(event) => setLastName(event.target.value)} placeholder="Your Last Name"/>
+                            </div>
+                             <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" value = { username } onChange={(event) => setUsername(event.target.value)} placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" value = { password } onChange={(event) => setPassword(event.target.value)} placeholder="Password"/>
+                            </div>
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <a href="/login" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+  //   <div>
+  //     <form onSubmit={handleSubmit}>
+  //       <input
+  //         type="text"
+  //         placeholder="firstName"
+  //         value={firstName}
+  //         onChange={(event) => setFirstName(event.target.value)}
+  //       />
+  //       <input
+  //         type="text"
+  //         placeholder="lastName"
+  //         value={lastName}
+  //         onChange={(event) => setLastName(event.target.value)}
+  //       />
+  //       <input
+  //         type="text"
+  //         placeholder="email"
+  //         value={email}
+  //         onChange={(event) => setEmail(event.target.value)}
+  //       />
+  //       <input
+  //         type="text"
+  //         placeholder="username"
+  //         value={username}
+  //         onChange={(event) => setUsername(event.target.value)}
+  //       />
+  //       <input
+  //         type="text"
+  //         placeholder="password"
+  //         value={password}
+  //         onChange={(event) => setPassword(event.target.value)}
+  //       />
+  //       <input type="submit" value="Submit" />
+  //     </form>
+  //   </div>
   );
 };
 

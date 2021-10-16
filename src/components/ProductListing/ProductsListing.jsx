@@ -28,6 +28,7 @@ const ProductsListing = (props) => {
 
             }
             return (
+              
               <tr key={product.id}>
                 <td>{product.product_name}</td>
                 <td>{product.category}</td>

@@ -1,4 +1,38 @@
-body {
+.signup {
+    margin-bottom: 150px;
+}
+
+/* .signin-form {
+    margin-right: 90px;
+    margin-left: 80px;
+} */
+
+
+.signin-content {
+    padding-top: 67px;
+    padding-bottom: 87px;
+}
+
+.material-icons-name {
+    font-size: 18px;
+}
+
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  width: 500px;
+  
+  overflow: hidden; }
+  .form-group:last-child {
+    margin-bottom: 0px; }
+
+input {
+    width: 100%;
+    display: block;
+    border: none;
+}
+/* body {
   font-family: "Lato", sans-serif;
 }
 
@@ -69,4 +103,4 @@ body {
 .btn-black {
   background-color: #000 !important;
   color: #fff;
-}
+} */
