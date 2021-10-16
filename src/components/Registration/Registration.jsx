@@ -42,6 +42,10 @@ const Registration = ({ registerUser }) => {
                                 <label for="pass"><i className="zmdi zmdi-lock"></i></label>
                                 <input type="password" value = { password } onChange={(event) => setPassword(event.target.value)} placeholder="Password"/>
                             </div>
+                             <div className="form-group">
+                                <label for="pass"><i className="zmdi zmdi-lock"></i></label>
+                                <input type="email" value = { email } onChange={(event) => setEmail(event.target.value)} placeholder="Email"/>
+                            </div>
                             
                             <div className="form-group form-button">
                                 <input type="submit" name="signup" id="signup" className="form-submit" value="Register"/>

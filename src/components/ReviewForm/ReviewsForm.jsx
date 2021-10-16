@@ -38,7 +38,7 @@ const ReviewForm = (props) => {
 
   return (
     <div className="reviews">
-      <form onSubmit={handleSubmit} className="form">
+      {/* <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           name="comment"
@@ -49,10 +49,12 @@ const ReviewForm = (props) => {
         <button type="submit" className="btn btn-dark btn-sm">
           Post
         </button>
-      </form>
+      </form> */}
+      <div>
       {createReview && createReview.map((createReview) => (
         <div>{createReview.comment}</div>
       ))}
+      </div>
     </div>
   );
   // getReplies.filter(getReplies => getReplies.commentId)

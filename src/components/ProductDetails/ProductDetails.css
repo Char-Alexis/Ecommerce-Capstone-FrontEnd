@@ -1,0 +1,18 @@
+.list-group{
+    width: 20em;
+    justify-content: center;
+}
+
+.product-name{
+  color: #475146;
+  font-family: 'Karla', sans-serif;
+  justify-content: center; 
+}
+
+.product{
+    margin-right: 5em;
+}
+
+h1{
+  justify-content: center;
+}

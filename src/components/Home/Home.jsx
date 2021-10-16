@@ -9,6 +9,7 @@ function Home() {
         <div>
           <img src="/images/serum.png" alt=""/>
           <h1>Skin Care Tips</h1>
+          {/* <a href="/login" className="signup-image-link">Learn More</a> */}
         </div>
         <div>
           <img src="/images/cream.png" alt=""/>

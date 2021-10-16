@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReviewForm from "../ReviewForm/ReviewsForm";
+import { Card } from "react-bootstrap"
 
 function ProductDetails(props) {
   const [product, setProduct] = useState();
@@ -21,27 +22,34 @@ function ProductDetails(props) {
     console.log("product", product);
     return (
       <div>
-        <table className="table table-striped table-dark">
-          <thead>
-            <tr>
-              <th>Product </th>
-              <th>Category</th>
-              <th>Price</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{product.product_name}</td>
-              <td>{product.category}</td>
-              <td>{product.price}</td>
-              <td>{product.description}</td>
+      <Card>
+      <div>
+          <Card.Body>
+            <div className="card"  >
+              <div className="d-flex justify-content-center">
+              <h1>{product.product_name}</h1>
+            </div>
+
+              </div>
+              <ul class="float-right">
+                <br></br>
+                <div className="d-flex justify-content-around"/>
+                <li class="card-text">{product.category}</li>
+                <li class="card-text">{product.price}</li>
+                <li class="card-text">{product.description}</li>
+                
+              </ul>
+              {/* <p>{product.category}</p>
+              <p>{product.price}</p>
+              <p>{product.description}</p> */}
               {/* <button>Add Review</button> */}
-            </tr>
-          </tbody>
-        </table>
-        <ReviewForm productId={params.id} />
+        </Card.Body>
       </div>
+
+      </Card>
+        <h4>Reviews</h4>
+        <ReviewForm productId={params.id} />
+        </div>
     );
   }
 }

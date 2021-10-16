@@ -15,13 +15,21 @@ import SuccessPage from "./components/SuccessPage/SucessPage";
 import ViewCart from "./components/ViewCart/ViewCart";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
 // import Delivery from "./components/Delivery/Delivery"
+import Results from "./components/Results/Results";
 import Checkout from "./components/Checkout/Checkout";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       products: [],
       review: [],
+      userPreferences: {
+       skinType: "",
+       userGoals: "",
+      },
+
+      
     };
     this.getProducts = this.getProducts.bind(this);
   }
@@ -50,6 +58,15 @@ class App extends Component {
       });
     }
   };
+
+  handleUserPreferences = (e) => {
+    this.setState({
+      userPreferences: {
+        ...this.state.userPreferences,
+        [e.target.name]: e.target.value
+      }
+    })
+  }
 
   // Login
   getCredentials = async (credentials) => {
@@ -134,7 +151,7 @@ class App extends Component {
               />
               <Route
                 path="/routine"
-                render={(props) => <RoutineBuilder {...props} />}
+                render={(props) => <RoutineBuilder {...props} userPreferences={this.state.userPreferences} handleUserPreferences={this.handleUserPreferences} />}
               />
             
                <Route
@@ -153,6 +170,11 @@ class App extends Component {
                 path="/success"
                 render={(props) => <SuccessPage {...props} />}
               />
+              <Route
+                path="/results"
+                render={(props) => <Results {...props} userPreferences={this.state.userPreferences} products={this.state.products}/>}
+              />
+
 
               
               {/* <Route
