@@ -16,7 +16,7 @@ import ViewCart from "./components/ViewCart/ViewCart";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
 import Delivery from "./components/Delivery/Delivery"
 import Results from "./components/Results/Results";
-import Checkout from "./components/Checkout/Checkout";
+import Payment from "./components/Payment/Payment";
 
 class App extends Component {
   constructor(props) {
@@ -109,7 +109,7 @@ class App extends Component {
   }
 
   successMessage = () => {
-    alert('Success!')
+    alert('Success! :)')
   }
   render() {
     console.log(this.state.user)
@@ -166,10 +166,7 @@ class App extends Component {
                 path="/viewcart"
                 render={(props) => <ViewCart {...props} />}
               />
-              <Route
-                path="/checkout"
-                render={(props) => <Checkout {...props} />}
-              />
+            
                <Route
                 path="/success"
                 render={(props) => <SuccessPage {...props} />}
@@ -185,10 +182,10 @@ class App extends Component {
                 path="/delivery"
                 render={(props) => <Delivery {...props} popUp={this.successMessage}/>}
               />
-              {/* <Route
-                path="/account"
-                render={(props) => <AccountDetails {...props} />}
-              /> */}
+              <Route
+                path="/payment"
+                render={(props) => <Payment {...props} />}
+              />
             </Switch>
             {/* <Route exact path="/login" component={Login} /> */}
           </div>

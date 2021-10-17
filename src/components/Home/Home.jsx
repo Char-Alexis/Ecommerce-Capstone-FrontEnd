@@ -15,12 +15,17 @@ function Home() {
         <div className="card__wrap--inner">
         <div class="card" >
           <img className="card__image flexible " src="/images/serum.png" style={{width:400}} alt=""/>
+          <h4>Skin Care Tips</h4>
           </div>
         <div class="card" >
           <img className="card__image flexible"src="/images/cream.png" style={{width:400}} alt=""/>
+          <h4>Skin Care Myths</h4>
+
         </div>
           <div class="card" >
             <img className="card__image flexible" src="/images/bar.png" style={{width:400}} alt=""/>
+            <h4>Rethinking Plastic</h4>
+
           </div>
           </div>    
         </div>
