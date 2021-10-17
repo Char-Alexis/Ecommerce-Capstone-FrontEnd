@@ -20,7 +20,7 @@
 //         <div>
 //             <StripeCheckout
 //                 label='Pay Now'
-//                 name='Freaky Jolly Co.'
+//                 name=''
 //                 billingAddress
 //                 shippingAddress
 //                 description={`Your total is $${price}`}

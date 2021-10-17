@@ -26,19 +26,20 @@ function ProductDetails(props) {
       <div>
           <Card.Body>
             <div className="card"  >
-              <div className="d-flex justify-content-center">
+              <div className="d-inline-flex p-2">
               <h1>{product.product_name}</h1>
             </div>
 
-              </div>
-              <ul class="float-right">
-                <br></br>
-                <div className="d-flex justify-content-around"/>
-                <li class="card-text">{product.category}</li>
-                <li class="card-text">{product.price}</li>
-                <li class="card-text">{product.description}</li>
+              </div >
+              <div className="container">
+              <ul >
+             
+                <p className="text-center font-weight-light">{product.description}</p>
+                <p className="text-center font-weight-light">Skin Type:{product.category}</p>
+                <p className="text-center font-weight-light">Price:$'{product.price}</p>
                 
               </ul>
+              </div>
               {/* <p>{product.category}</p>
               <p>{product.price}</p>
               <p>{product.description}</p> */}
@@ -47,7 +48,7 @@ function ProductDetails(props) {
       </div>
 
       </Card>
-        <h4>Reviews</h4>
+
         <ReviewForm productId={params.id} />
         </div>
     );

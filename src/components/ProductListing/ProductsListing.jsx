@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Card } from "react-bootstrap"
+import { Card, Row, Container } from "react-bootstrap"
 
 const ProductsListing = (props) => {
   return (
       <Card style={{ width: '18rem'}} >
-        <Card.Body>
+        <Card.Body >
         <div className="wrapper">
           {props.productList.map((product) => {
             console.log(product);
@@ -21,9 +21,12 @@ const ProductsListing = (props) => {
 
             }
             return (
-             <div className="row" > 
-             <div className="col-sm-12">
-              <tr key={product.id}>
+              
+             <div className="container" > 
+             <div className="card__wrap--outer">
+               
+              <div key={product.id}>
+                <div class="content">
                 <p>Name: {product.product_name}</p>
                 <p>Description: {product.description}</p>
                 <p>Category: {product.category}</p>
@@ -33,12 +36,14 @@ const ProductsListing = (props) => {
                   
                   <button type = "button" class="btn btn-light" onClick={onClickAddToCart}>Add to Cart</button>
                 </p>
-              </tr>
+                </div>
+              </div>
               </div>
           </div>
             );
           })}
         </div>
+
           </Card.Body>
 
         </Card>

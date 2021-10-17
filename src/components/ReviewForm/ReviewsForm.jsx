@@ -50,14 +50,15 @@ const ReviewForm = (props) => {
           Post
         </button>
       </form> */}
-      <div>
+      <div className="container">
+        <h4 className="">Reviews</h4>
       {createReview && createReview.map((createReview) => (
-        <div>{createReview.comment}</div>
+        <><p>user:{createReview.id}</p><div>{createReview.comment}</div></>
       ))}
       </div>
     </div>
   );
-  // getReplies.filter(getReplies => getReplies.commentId)
+  // getReviews.filter(getReviews => getReviews.commentId)
 };
 
 export default ReviewForm;

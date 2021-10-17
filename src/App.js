@@ -14,7 +14,7 @@ import AddToCart from "./components/AddToCart/AddToCart";
 import SuccessPage from "./components/SuccessPage/SucessPage";
 import ViewCart from "./components/ViewCart/ViewCart";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
-// import Delivery from "./components/Delivery/Delivery"
+import Delivery from "./components/Delivery/Delivery"
 import Results from "./components/Results/Results";
 import Checkout from "./components/Checkout/Checkout";
 
@@ -177,10 +177,10 @@ class App extends Component {
 
 
               
-              {/* <Route
+              <Route
                 path="/delivery"
                 render={(props) => <Delivery {...props} />}
-              /> */}
+              />
               {/* <Route
                 path="/account"
                 render={(props) => <AccountDetails {...props} />}

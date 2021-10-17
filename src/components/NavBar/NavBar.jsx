@@ -29,20 +29,21 @@ const NavBar = ({ username }) => {
               </a>
             </Link>
 
+             <Link as={Link} to="/delivery">
+              <a className="nav-item nav-link" href="/delivery">
+                Delivery
+              </a>
+                </Link>
             <Link as={Link} to="/login">
               <a className="nav-item nav-link" href="/login">
                 Login
               </a>
             </Link>
-             <Link as={Link} to="/addtocart">
-              <a className="nav-item nav-link" href="/login">
+             <Link as={Link} to="/viewcart">
+              <a className="nav-item nav-link" href="/viewcart">
                 Cart
               </a>
             </Link>
-
-            {/* <a className="nav-item nav-link" href="#">
-                Cart
-              </a> */}
           </div>
         </div>
       </nav>
