@@ -107,6 +107,10 @@ class App extends Component {
     let response = await axios.get("http://127.0.0.1:8000/api/store/product/");
     console.log(response.data)
   }
+
+  successMessage = () => {
+    alert('Success!')
+  }
   render() {
     console.log(this.state.user)
     return (
@@ -179,7 +183,7 @@ class App extends Component {
               
               <Route
                 path="/delivery"
-                render={(props) => <Delivery {...props} />}
+                render={(props) => <Delivery {...props} popUp={this.successMessage}/>}
               />
               {/* <Route
                 path="/account"
