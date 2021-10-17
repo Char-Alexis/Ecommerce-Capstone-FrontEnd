@@ -31,7 +31,7 @@ function ProductDetails(props) {
             </div>
 
               </div >
-              <div className="container">
+              <div className="">
               <ul >
              
                 <p className="text-center font-weight-light">{product.description}</p>
@@ -40,10 +40,6 @@ function ProductDetails(props) {
                 
               </ul>
               </div>
-              {/* <p>{product.category}</p>
-              <p>{product.price}</p>
-              <p>{product.description}</p> */}
-              {/* <button>Add Review</button> */}
         </Card.Body>
       </div>
 

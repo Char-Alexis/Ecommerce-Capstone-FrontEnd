@@ -2,12 +2,14 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Card, Row, Container } from "react-bootstrap"
+import "./ProductListing.css";
 
 const ProductsListing = (props) => {
+
+   
   return (
-      <Card style={{ width: '18rem'}} >
-        <Card.Body >
-        <div className="wrapper">
+    <div>
+        <div className="">
           {props.productList.map((product) => {
             console.log(product);
             const onClickAddToCart = async () => {
@@ -22,31 +24,23 @@ const ProductsListing = (props) => {
             }
             return (
               
-             <div className="container" > 
-             <div className="card__wrap--outer">
+ 
                
-              <div key={product.id}>
-                <div class="content">
-                <p>Name: {product.product_name}</p>
-                <p>Description: {product.description}</p>
-                <p>Category: {product.category}</p>
-                <p>$ {product.price}</p>
-                <p>
-                  <NavLink to={`/details/${product.id}`} activeStyle={{color:"green", textDecoration:"none"}}>View</NavLink>
-                  
-                  <button type = "button" class="btn btn-light" onClick={onClickAddToCart}>Add to Cart</button>
-                </p>
+              <div class="container" >
+                <div key={product.id}>
+                <h1>Name: {product.product_name}</h1>
+                  <p>
+                    <NavLink to={`/details/${product.id}`}>View</NavLink>
+                    
+                    <button type = "button" class="btn btn-light" onClick={onClickAddToCart} >Add to Cart</button>
+                  </p>
                 </div>
               </div>
-              </div>
-          </div>
+     
             );
           })}
         </div>
-
-          </Card.Body>
-
-        </Card>
+        </div>
   );
 };
 

@@ -1,14 +1,38 @@
-.container{
+/* .container{
   width: 100%;
   max-width: 960px;
   margin:100px auto;
   flex-grow: 1;
 
   margin: 0 auto;
+} */
+
+/* 
+.outer{
+    display: flex-direction row;
+    flex-wrap: wrap;
+    width: 100%;
+ } */
+
+/* 
+.cardname{
+  width:100%; 
+  min-height: 100%;
+  object-fit: cover;
+  object-position: contain;
+} */
+/* 
+.align-content-start{
+  justify-content: center;
+
+} */
+
+
+.container{
+ display: flex;
+
 }
 
-.content{
-    width: 400px;
-    margin: 0 auto;
-
+.box-1{
+  flex:2;
 }

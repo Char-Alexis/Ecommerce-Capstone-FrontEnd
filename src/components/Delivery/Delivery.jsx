@@ -6,7 +6,7 @@ function Delivery(props){
   const[date, setDate]=useState();
 
   return(
-    <div className="container">
+    <div className="align-self-center">
     <h1> Delivery</h1>
     <h4>Selected Date: {date}</h4>
     <input type="date" onChange={e=>setDate(e.target.value)}></input>

@@ -27,14 +27,6 @@ function RoutineBuilder({userPreferences, handleUserPreferences }) {
 
   ];
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [displayMorningRoutine, setMorningRoutine] = useState();
-  const [displayNightRoutine, setDisplayNightRoutine] = useState()
-
-  const handleSubmit = (isCorrect) => {
-
-  }
-
   return (
     <div className="d-flex justify-content-center mb-3">
     <Form >

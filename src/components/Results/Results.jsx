@@ -29,7 +29,6 @@ const Results = ({products, userPreferences}) => {
           {filteredProducts.map((product)=>(
               <div> 
                   <h1>{product.product_name}</h1>
-                  <p>{product.description}</p>
               </div>
           ))}  
         </div>
