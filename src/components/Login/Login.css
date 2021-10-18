@@ -13,16 +13,13 @@
 
 
 .form-group {
-  position: relative;
+  /* position: relative; */
   margin-bottom: 25px;
   width: 500px;
-  
-  overflow: hidden; }
-  .form-group:last-child {
-    margin-bottom: 0px; }
+}
 
 input {
     width: 100%;
-    display: block;
-    border: none;
+    /* display: block; */
+   
 }

@@ -26,7 +26,7 @@ function ViewCart(props) {
     return (
         <div>
             {cartProducts &&
-            <div className="container">
+            <div className="mx-auto">
                 <p className="list-group-item">{cartProducts.product_name}</p>
                 <p className="list-group-item">{cartProducts.price}</p>
                 <p><StripeCheckout stripeKey="pk_test_51JiRtyCwgXG48Eq1UB7ZXpPx4BXL5QtPhXQ43Lzl5bDuTvXpca4jevTkklfNu8HkX7KVKfJwhondnCbfE3GBnknQ00aAbu7lGK"

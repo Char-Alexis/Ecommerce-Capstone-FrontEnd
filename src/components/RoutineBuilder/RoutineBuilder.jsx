@@ -13,6 +13,7 @@ function RoutineBuilder({userPreferences, handleUserPreferences }) {
         { text: 'Normal', isCorrect: false,type:"skinType" },
         { text: 'Combination', isCorrect: false,type:"skinType" },
         { text: 'Sensitive', isCorrect: false,type:"skinType" },
+        { text: 'Oily', isCorrect: false,type:"skinType" },
       ],
     },
     {
@@ -22,6 +23,8 @@ function RoutineBuilder({userPreferences, handleUserPreferences }) {
         { text: 'Calm Redness', isCorrect: false,type:"userGoals" },
         { text: 'Lighten Hyperpigmentation', isCorrect: false,type:"userGoals" },
         { text: 'Hydrate and Moisturize', isCorrect: false,type:"userGoals" },
+        { text: 'Control Shine', isCorrect: false,type:"userGoals" },
+
       ],
     }
 

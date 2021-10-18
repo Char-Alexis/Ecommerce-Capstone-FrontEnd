@@ -12,7 +12,7 @@ import ProductsListing from "./components/ProductListing/ProductsListing";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import ViewCart from "./components/ViewCart/ViewCart";
 import Delivery from "./components/Delivery/Delivery"
-import Results from "./components/Results/Results";
+import RoutineResults from "./components/RoutineResults/Results";
 // import AccountDetails from "./components/AccountDetails/AccountDetails";
 
 class App extends Component {
@@ -101,6 +101,7 @@ class App extends Component {
     });
   }
 
+  // Add products to cart
   async addToCart() {
     let response = await axios.get("http://127.0.0.1:8000/api/store/product/");
     console.log(response.data)
@@ -162,7 +163,7 @@ class App extends Component {
               />
               <Route
                 path="/results"
-                render={(props) => <Results {...props} userPreferences={this.state.userPreferences} products={this.state.products}/>}
+                render={(props) => <RoutineResults {...props} userPreferences={this.state.userPreferences} products={this.state.products}/>}
               />
               <Route
                 path="/delivery"
