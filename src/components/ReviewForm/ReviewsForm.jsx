@@ -53,7 +53,7 @@ const ReviewForm = (props) => {
       <div className="">
         <h1 className="">Reviews</h1>
       {createReview && createReview.map((createReview) => (
-        <><h4>user:{createReview.id}</h4><h2>{createReview.comment}</h2></>
+        <><h4>user:{createReview.user_id}</h4><h2>{createReview.comment}</h2></>
       ))}
       </div>
     </div>

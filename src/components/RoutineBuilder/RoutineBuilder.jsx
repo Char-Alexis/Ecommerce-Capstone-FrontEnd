@@ -37,6 +37,7 @@ function RoutineBuilder({userPreferences, handleUserPreferences }) {
         <div key={`radio-${index + 1}`}>
           
           <h1>{item.question}</h1>
+          <h4>Select one answer per question.</h4>
           {item.options.map((option, index)=>(
 
             <Form.Check 

@@ -52,7 +52,7 @@ const Registration = ({ registerUser }) => {
                         </form>
                     </div>
                     <div className="signup-image">
-                        <a href="/login" className="signup-image-link">I am already member</a>
+                        <a href="/login" className="signup-image-link">I am already a member</a>
                     </div>
                 </div>
             </div>
