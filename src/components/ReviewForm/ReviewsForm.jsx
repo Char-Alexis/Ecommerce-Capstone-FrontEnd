@@ -2,58 +2,59 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const ReviewForm = (props) => {
-  const [getReviews, setGetReviews] = useState({
+  const [postReview, setPostReview] = useState({
     comment: "",
     product_id: props.productId,
+    // user_id: props.userId
   });
 
-  const [createReview, setCreateReview] = useState([]);
+  const [displayReview, setDisplayReview] = useState([]);
 
   useEffect(() => {
     fetchReviews();
-  }, [getReviews]);
+  }, [postReview]);
 
 
   async function fetchReviews() {
     await axios
       .get(`http://127.0.0.1:8000/api/store/review/get/${props.productId}/`)
       .then((response) => {
-        setCreateReview(response.data);
+        setDisplayReview(response.data);
       });
   }
 
   const handleChange = (event) => {
     const newReview = {
-      ...getReviews,
+      ...postReview,
       [event.target.name]: event.target.value,
     };
-    setGetReviews(newReview);
+    setPostReview(newReview);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(getReviews)
-    axios.post("http://127.0.0.1:8000/api/store/review/", getReviews);
+    console.log(postReview)
+    axios.post(`http://127.0.0.1:8000/api/store/review/`, postReview);
   };
 
   return (
     <div className="reviews">
-      {/* <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           name="comment"
           className="form-control"
           onInput={handleChange}
-          value={getReviews.comment}
+          value={postReview.comment}
         />
         <button type="submit" className="btn btn-dark btn-sm">
           Post
         </button>
-      </form> */}
+      </form>
       <div className="">
         <h1 className="">Reviews</h1>
-      {createReview && createReview.map((createReview) => (
-        <><h4>user:{createReview.user_id}</h4><h2>{createReview.comment}</h2></>
+      {displayReview && displayReview.map((displayReview) => (
+        <><h4>user:{displayReview.user_id}</h4><h2>{displayReview.comment}</h2></>
       ))}
       </div>
     </div>

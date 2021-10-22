@@ -39,6 +39,11 @@ const NavBar = ({ username }) => {
                 Login
               </a>
             </Link>
+            <Link as={Link} to="/account">
+              <a className="nav-item nav-link" href="/account">
+                Account
+              </a>
+            </Link>
              <Link as={Link} to="/viewcart">
               <a className="nav-item nav-link" href="/viewcart">
                 Cart

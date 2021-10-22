@@ -13,7 +13,7 @@ import ProductDetails from "./components/ProductDetails/ProductDetails";
 import ViewCart from "./components/ViewCart/ViewCart";
 import Delivery from "./components/Delivery/Delivery"
 import RoutineResults from "./components/RoutineResults/Results";
-// import AccountDetails from "./components/AccountDetails/AccountDetails";
+import AccountDetails from "./components/AccountDetails/AccountDetails";
 
 class App extends Component {
   constructor(props) {
@@ -57,6 +57,7 @@ class App extends Component {
     }
   };
 
+  //Routine Builder
   handleUserPreferences = (e) => {
     this.setState({
       userPreferences: {
@@ -169,11 +170,11 @@ class App extends Component {
                 path="/delivery"
                 render={(props) => <Delivery {...props} popUp={this.successMessageForDelivery}/>}
               />
-              {/* <Route
+              <Route
                 path="/account"
                 render={(props) => <AccountDetails {...props} />}
               />
-            */}
+           
             </Switch>
           </div>
         </BrowserRouter>

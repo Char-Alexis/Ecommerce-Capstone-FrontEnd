@@ -14,7 +14,7 @@ function ViewCart(props) {
     },) 
     const getCart = async (user) => {
         try{
-            let response = await axios.get("http://127.0.0.1:8000/api/store/cart/");
+            let response = await axios.get(`http://127.0.0.1:8000/api/store/cart/`);
             setCartProducts(response.data)
         }    
         
@@ -25,6 +25,11 @@ function ViewCart(props) {
 
     return (
         <div>
+            <div>
+                {props.user.cart.map((product)=> (
+                    <span>{product.product_name}</span>
+                ))}
+            </div>
             {cartProducts &&
             <div className="mx-auto">
                 <p className="list-group-item">{cartProducts.product_name}</p>
