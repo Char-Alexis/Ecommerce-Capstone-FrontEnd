@@ -1,25 +1,32 @@
-.signup {
+/* .signup {
     margin-bottom: 150px;
-}
+} */
 
-.signin-content {
+
+/* .container {
+    justify-content: center;
+
+} */
+/* .signin-content {
     padding-top: 67px;
     padding-bottom: 87px;
-}
+} */
 
-.material-icons-name {
+/* .material-icons-name {
     font-size: 18px;
+} */
+
+.signup-image {
+    margin: 0 55px;
 }
 
 
 .form-group {
-  /* position: relative; */
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   width: 500px;
 }
 
-input {
+/* input {
     width: 100%;
-    /* display: block; */
    
-}
+} */

@@ -45,7 +45,7 @@ function ProductDetails(props) {
 
       </Card>
 
-        <ReviewForm productId={params.id} />
+        <ReviewForm productId={params.id} user={props.user} />
         </div>
     );
   }

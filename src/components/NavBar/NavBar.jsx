@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 const NavBar = ({ username }) => {
   return (
     <React.Fragment>
-      {username && <h5> Welcome {username.username} </h5>}
-      
+      {/* {username && <h5> Welcome {username.username} </h5>} */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
           Kind to Skin Co
@@ -39,14 +38,14 @@ const NavBar = ({ username }) => {
                 Login
               </a>
             </Link>
-            <Link as={Link} to="/account">
+            {/* <Link as={Link} to="/account">
               <a className="nav-item nav-link" href="/account">
                 Account
               </a>
-            </Link>
+            </Link> */}
              <Link as={Link} to="/viewcart">
               <a className="nav-item nav-link" href="/viewcart">
-                Cart
+                🛒
               </a>
             </Link>
           </div>

@@ -47,17 +47,21 @@ const Results = ({products, userPreferences}) => {
     return (
         <div>
         <h1>Product Recommendations</h1>
+        <div className="card"></div>
+
         <h1 >🌤 Morning Routine: </h1>
-        <div className="d-flex justify-content-center mb-3">
+        <div className="">
           {filterMorningProducts.map((product)=>(
               <div> 
-                  <h1>{product.product_name}</h1>
+                  <h2>{product.product_name}</h2>
               </div>
           ))}  
+
         </div>
+        <div className=""></div>
         <h1> ★ Night Routine: </h1>
         {filterNightProducts.map((product)=>(
-            <h1>{product.product_name}</h1>
+            <h2>{product.product_name}</h2>  
         ))}
         </div>
     )

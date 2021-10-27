@@ -39,11 +39,9 @@ class Login extends Component {
                     <h2 className="form-title">Sign in</h2>
                     <form onSubmit={this.handleSubmit} className="login-form" id="login-form">
                         <div className="form-group">
-                            <label for="your_name"><i className="zmdi zmdi-account material-icons-name"></i></label>
                             <input type="text" name="username"  onChange={this.handleChange} value={this.state.username} placeholder="Your Username"/>
                         </div>
                         <div className="form-group">
-                            <label for="your_pass"><i className="zmdi zmdi-lock"></i></label>
                             <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password"/>
                         </div>
                         <div className="form-group">
@@ -60,6 +58,7 @@ class Login extends Component {
                             
                         </ul>
                     </div>
+                    
                 </div>
             </div>
         </div>

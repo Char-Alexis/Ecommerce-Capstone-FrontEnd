@@ -14,6 +14,7 @@ import ViewCart from "./components/ViewCart/ViewCart";
 import Delivery from "./components/Delivery/Delivery"
 import RoutineResults from "./components/RoutineResults/Results";
 import AccountDetails from "./components/AccountDetails/AccountDetails";
+import Notes from "./components/Notes/Notes";
 
 class App extends Component {
   constructor(props) {
@@ -94,7 +95,6 @@ class App extends Component {
 
   // Get all products
   async getProducts() {
-    console.log("hi");
     let response = await axios.get("http://127.0.0.1:8000/api/store/product/");
     console.log(response.data);
     this.setState({
@@ -108,6 +108,27 @@ class App extends Component {
     console.log(response.data)
   }
 
+  // Delivery notes
+  async getNotes() {
+    let response = await axios.get("http://127.0.0.1:8000/api/store/delivery/");
+    console.log(response.data);
+    this.setState({
+      notes: response.data,
+    });
+  }
+  //Post Review
+  // postingAReview = async (newReview) => {
+  //   try{
+  //     const jwt= localStorage.getItem('token');
+  //     console.log("JWT:", jwt)
+  //     let response = await axios.post("http://127.0.0.1:8000/api/store/review/get/", newReview,  { headers: {Authorization: 'Bearer ' + jwt}})
+  //     console.log(response)
+  //   }
+  //   catch(err){
+  //     console.log(err)
+  //   }
+  //   this.getCredentials()
+  // }
 
   successMessageForDelivery = () => {
     alert('Success! :)')
@@ -139,7 +160,7 @@ class App extends Component {
                 exact
                 path="/details/:id"
                 render={(props) => (
-                  <ProductDetails {...props} details={this.state.products} />
+                  <ProductDetails {...props} details={this.state.products} user={this.state.user}/>
                 )}
               />
               <Route
@@ -151,7 +172,7 @@ class App extends Component {
               <Route
                 path="/reviews"
                 render={(props) => (
-                  <ReviewForm {...props} productId={this.state.review} />
+                  <ReviewForm productId={this.state.review} user={this.state.user} />
                 )}
               />
               <Route
@@ -170,11 +191,15 @@ class App extends Component {
                 path="/delivery"
                 render={(props) => <Delivery {...props} popUp={this.successMessageForDelivery}/>}
               />
-              <Route
+              {/* <Route
                 path="/account"
                 render={(props) => <AccountDetails {...props} />}
+              /> */}
+                <Route
+                path="/notes/:id"
+                render={(props) => <Notes {...props} />}
               />
-           
+         
             </Switch>
           </div>
         </BrowserRouter>

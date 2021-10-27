@@ -4,7 +4,7 @@ import StripeCheckout from 'react-stripe-checkout';
 
 function ViewCart(props) {
     const [cartProducts, setCartProducts] = useState(props.username);
-
+ 
     let handleToken = (token) => {
         console.log(token)
     }
@@ -12,6 +12,8 @@ function ViewCart(props) {
     useEffect (() => {
      getCart(props.username)
     },) 
+
+
     const getCart = async (user) => {
         try{
             let response = await axios.get(`http://127.0.0.1:8000/api/store/cart/`);
@@ -25,11 +27,11 @@ function ViewCart(props) {
 
     return (
         <div>
-            <div>
+            {/* <div>
                 {props.user.cart.map((product)=> (
                     <span>{product.product_name}</span>
                 ))}
-            </div>
+            </div> */}
             {cartProducts &&
             <div className="mx-auto">
                 <p className="list-group-item">{cartProducts.product_name}</p>

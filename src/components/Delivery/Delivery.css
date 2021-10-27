@@ -1,6 +1,6 @@
-.main{
+/* .main{
     text-align: center;
-}
+} */
 
 input{
     height: 40px;
@@ -10,4 +10,8 @@ input{
 h4{
     font-family: 'Karla', sans-serif;
 
+}
+
+.ml-3 {
+    height: 500px;
 }

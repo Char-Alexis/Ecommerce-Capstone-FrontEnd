@@ -5,7 +5,7 @@ const ReviewForm = (props) => {
   const [postReview, setPostReview] = useState({
     comment: "",
     product_id: props.productId,
-    // user_id: props.userId
+    user_id: props.userId,
   });
 
   const [displayReview, setDisplayReview] = useState([]);
@@ -34,12 +34,15 @@ const ReviewForm = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(postReview)
-    axios.post(`http://127.0.0.1:8000/api/store/review/`, postReview);
+    const jwt = localStorage.getItem('token');
+
+    axios.post(`http://127.0.0.1:8000/api/store/review/`, postReview,  { headers: {Authorization: 'Bearer ' + jwt}});
   };
 
+console.log(props)
   return (
     <div className="reviews">
-      <form onSubmit={handleSubmit} className="form">
+      {/* <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           name="comment"
@@ -50,7 +53,7 @@ const ReviewForm = (props) => {
         <button type="submit" className="btn btn-dark btn-sm">
           Post
         </button>
-      </form>
+      </form> */}
       <div className="">
         <h1 className="">Reviews</h1>
       {displayReview && displayReview.map((displayReview) => (

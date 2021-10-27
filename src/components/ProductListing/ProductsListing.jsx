@@ -14,13 +14,14 @@ const ProductsListing = (props) => {
           {props.productList.map((product) => {
             console.log(product);
             const onClickAddToCart = async () => {
-              console.log(`Adding Product(${product.id}) To Cart`)
-              await axios.post("http://127.0.0.1:8000/api/store/cart/", {
-                product_id: product.id,
-                quantity: 1,
-                username: localStorage.getItem("username"),
-                price: product.price
-              })
+              // console.log(`Adding Product(${product.id}) To Cart`)
+              // await axios.post("http://127.0.0.1:8000/api/store/cart/", {
+                // product_id: product.id,
+              //   quantity: 1,
+              //   username: localStorage.getItem("username"),
+              //   price: product.price
+              // })
+              alert ('Added to cart.')
 
             }
             return (
@@ -33,7 +34,7 @@ const ProductsListing = (props) => {
                   <p>
                     <NavLink to={`/details/${product.id}`}>View</NavLink>
                     
-                    <button type = "button" class="btn btn-light" onClick={onClickAddToCart} >Add to Cart</button>
+                    <button type = "button" class="btn btn-light" onClick={onClickAddToCart}  >Add to Cart</button>
                   </p>
                 </div>
               </div>
