@@ -10,7 +10,7 @@ function ViewCart(props) {
     }
 
     useEffect (() => {
-     getCart(props.username)
+     getCart()
     },) 
 
 
@@ -27,6 +27,8 @@ function ViewCart(props) {
 
     return (
         <div>
+
+    
             {/* <div>
                 {props.user.cart.map((product)=> (
                     <span>{product.product_name}</span>

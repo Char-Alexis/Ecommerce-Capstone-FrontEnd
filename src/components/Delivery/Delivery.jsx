@@ -28,7 +28,10 @@ function Delivery(props){
 
     <div>
       <div className="align-self-center">
-        <h1> Delivery</h1>
+        <h1> </h1>
+        <h2> Instructions:</h2>
+        <h4> On delivery day, leave the empty refill containers outside. We'll drop off your order and swap with your old containers to be cleaned, sanitized, and reused! </h4>
+
         </div>
         
         <div className="container">
