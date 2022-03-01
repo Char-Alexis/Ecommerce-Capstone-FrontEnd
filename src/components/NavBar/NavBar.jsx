@@ -1,13 +1,15 @@
 import React from "react";
+import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 const NavBar = ({ username }) => {
   return (
     <React.Fragment>
       {/* {username && <h5> Welcome {username.username} </h5>} */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <header id="section-header" role="banner">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light" >
         <a className="navbar-brand" href="#">
-          Kind to Skin Co
+          <h7>Kind to Skin Co</h7>
         </a>
        
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -51,6 +53,7 @@ const NavBar = ({ username }) => {
           </div>
         </div>
       </nav>
+      </header>
     </React.Fragment>
   );
 };
