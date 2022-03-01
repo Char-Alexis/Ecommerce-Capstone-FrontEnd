@@ -8,10 +8,6 @@ const NavBar = ({ username }) => {
       {/* {username && <h5> Welcome {username.username} </h5>} */}
       <header id="section-header" role="banner">
       <nav className="navbar navbar-expand-lg navbar-light bg-light" >
-        <a className="navbar-brand" href="#">
-          <h7>Kind to Skin Co</h7>
-        </a>
-       
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-item nav-link active" href="/">
