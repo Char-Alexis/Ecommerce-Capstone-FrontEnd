@@ -15,6 +15,7 @@ import Delivery from "./components/Delivery/Delivery"
 import RoutineResults from "./components/RoutineResults/Results";
 import AccountDetails from "./components/AccountDetails/AccountDetails";
 import Notes from "./components/Notes/Notes";
+// import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   constructor(props) {
@@ -202,6 +203,7 @@ class App extends Component {
          
             </Switch>
           </div>
+     
         </BrowserRouter>
       </div>
     );
