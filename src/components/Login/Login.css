@@ -4,20 +4,25 @@
     
 }
 
-.container{
+.signin{
     background-color: #f5f5f5;
 }
 
+.signin-form{
+    padding: 0%;
+    margin-top: 200px;
+}
+
 .form-group, .form-title{
-padding: 0 180px;
+    padding: 0 180px;
 }
 
 .social-login{
-    padding: 50px;
+    padding: 130px;
 }
 
 .socials{
-    height: 30px;
+    height: 40px;
 }
 
 .form-group {
