@@ -1,25 +1,23 @@
 .register-form{
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 50%;
     overflow: hidden;
 }
 
 .signup-form{
   margin-top: 2em;
 }
-.form-group {
-    position: relative;
+.form-group-r {
     margin-bottom: 25px;
-    overflow: hidden;
+    padding: 0 180px;
 
 }
 
-/* .container-register {
-    justify-content: center;
-} */
 input {
-    /* width: 50%; */
-    display: block;
     border: none;
+}
+
+.registration-image{
+    width: 100%;
+
 }
