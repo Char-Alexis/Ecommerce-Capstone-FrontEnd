@@ -19,9 +19,10 @@ const Registration = ({ registerUser }) => {
   };
   return (
 
-            <section className="signup">
-            <div className="container">
-                <div className="signup-content">
+    <div className="signin">
+      <div class="container">
+          <div class="row">
+            <div class="col">
                     <div className="signup-form">
                         <h2 className="form-title">Sign up</h2>
                         <form onSubmit={handleSubmit} className="register-form" id="register-form">
@@ -51,7 +52,11 @@ const Registration = ({ registerUser }) => {
                     </div>
                 </div>
             </div>
-        </section>
+             <div class="col">
+                <img src="/images/soap.jpg" className="image" />  
+            </div>
+        </div>
+    </div>
   );
 };
 
