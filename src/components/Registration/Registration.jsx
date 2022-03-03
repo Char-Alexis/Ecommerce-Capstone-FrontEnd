@@ -53,7 +53,7 @@ const Registration = ({ registerUser }) => {
                 </div>
             </div>
              <div class="col">
-                <img src="/images/soap.jpg" className="registration-image" />  
+                <img src="/images/cream.png" className="registration-image" />  
             </div>
         </div>
     </div>
