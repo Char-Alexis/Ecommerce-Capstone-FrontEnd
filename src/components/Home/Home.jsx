@@ -16,7 +16,9 @@ function Home() {
       </div>
           <div class="col">
           <h1>More than skin deep</h1>
-          <p>Rethinking Plastic</p>
+          <h5>Lets Rethink Plastic</h5>
+
+          <p>Part of my ongoing effort to shed light on reducing waste and improving sustainability efforts in packaging practices.</p>
           </div>
         </div>
       </div>
