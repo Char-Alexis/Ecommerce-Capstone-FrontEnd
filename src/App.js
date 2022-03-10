@@ -16,6 +16,7 @@ import RoutineResults from "./components/RoutineResults/Results";
 import AccountDetails from "./components/AccountDetails/AccountDetails";
 import Notes from "./components/Notes/Notes";
 // import Footer from "./components/Footer/Footer";
+import Carousel from "./components/Home/Carousel";
 
 class App extends Component {
   constructor(props) {

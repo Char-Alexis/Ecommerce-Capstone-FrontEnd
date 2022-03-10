@@ -8,7 +8,11 @@ const ProductsListing = (props) => {
 
    
   return (
-    //Adding to Cart
+    <div>
+
+    <h1>Our Products</h1>
+
+    {/* Adding to Cart */}
     <div>
         <div className="">
           {props.productList.map((product) => {
@@ -27,6 +31,8 @@ const ProductsListing = (props) => {
             return (
               
               //Details of each product
+      
+           
                
               <div class="container" >
                 <div key={product.id}>
@@ -38,9 +44,9 @@ const ProductsListing = (props) => {
                   </p>
                 </div>
               </div>
-     
             );
           })}
+        </div>
         </div>
         </div>
   );
