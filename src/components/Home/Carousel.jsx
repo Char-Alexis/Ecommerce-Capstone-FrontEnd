@@ -5,7 +5,7 @@ function Slider() {
     return(
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                {/* <div class="col-sm-12"> */}
                 <div id="carouselSlider" class="carousel slide" data-ride="carousel">
 
                 {/* indicators */}
@@ -45,7 +45,7 @@ function Slider() {
                 </a>
                     </div>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
 
     )
