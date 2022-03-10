@@ -1,10 +1,10 @@
 import React from "react";
+import "./Carousel.css";
 
 
 function Slider() {
     return(
         <div class="container">
-            <div class="row">
                 {/* <div class="col-sm-12"> */}
                 <div id="carouselSlider" class="carousel slide" data-ride="carousel">
 
@@ -17,21 +17,21 @@ function Slider() {
                 {/* wrapper */}
                 <div class="carousel-inner" >
                     <div class="carousel-item active">
-                    <img class="d-block w-100" src="/images/startjourney.png" alt="First slide"/>
-                    {/* <div class="carousel-caption">
+                    <img src="/images/plasticwaste.png" alt="First slide"/>
+                    <div class="carousel-caption">
                         <h1>Plastic</h1>
 
-                    </div> */}
+                    </div>
                     </div>
                     <div class="carousel-item">
-                    <img  src="/images/delivery.png" alt="Second slide"/>
+                    <img  src="/images/sourcing.png" alt="Second slide"/>
                     {/* <div class="carousel-caption d-none d-md-block">
                         <h1>hi</h1>
 
                     </div> */}
                     </div>
                     <div class="carousel-item">
-                    <img class="d-block w-100" src="/images/cream.png" alt="Third slide"/>
+                    <img src="/images/co2.png" alt="Third slide"/>
                     </div>
                 </div>
                 {/* controls for next and prev buttons */}
@@ -44,7 +44,6 @@ function Slider() {
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
                     </div>
-                </div>
             {/* </div> */}
         </div>
 

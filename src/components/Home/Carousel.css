@@ -1,0 +1,20 @@
+/* .carousel-inner{
+    width: 100%;
+    display: block;
+    margin: 0 80px 30px 10em;
+    text-align: center;
+} */
+
+
+#carouselSlider{
+    width: 100%;
+    display: block;
+    margin: 0 80px 30px 10em;
+    text-align: center;
+
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
