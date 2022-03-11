@@ -5,7 +5,8 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div>
+    <div class="main-title">
+      <h1>More than skin deep</h1>
     <div className="landing-page">
       <div className="container">
         <div class="row">
@@ -16,8 +17,7 @@ function Home() {
         <img src="/images/facephoto.png" className="roundimg" />
       </div>
           <div class="col">
-          <h1>More than skin deep</h1>
-          <h5>Lets Rethink Plastic</h5>
+          <h3>Lets Rethink Plastic</h3>
 
           <p>Part of my ongoing effort to shed light on reducing waste and improving sustainability efforts in packaging practices.</p>
           </div>

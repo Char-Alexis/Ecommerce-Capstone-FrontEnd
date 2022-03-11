@@ -27,3 +27,10 @@
 .carousel-control-prev /*, .carousel-indicators */ {
     filter: invert(100%);
 }
+
+
+.top-left{
+  text-align: left;
+  top: 8px;
+  left: 16px;
+}

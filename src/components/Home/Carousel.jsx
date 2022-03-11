@@ -23,13 +23,18 @@ function Slider() {
                     </div>
                     <div class="carousel-item">
                     <img  src="/images/sourcing.png" alt="Second slide"/>
-                    {/* <div class="carousel-caption d-none d-md-block">
-                        <h1>hi</h1>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Responsible Sourcing</h1>
+                        <h3>We audit and research ecotoxicity and biodegradability of every ingredient</h3>
 
-                    </div> */}
+                    </div>
                     </div>
                     <div class="carousel-item">
                     <img src="/images/co2.png" alt="Third slide"/>
+                     <div class="carousel-caption d-none d-md-block">
+                         <h1>CO2 emissions direct impact on global warming</h1>
+                        <h3 className="top-left">Lets continue to reduce and offset the carbon footprint of product packaging and transportation!</h3>
+                    </div>
                     </div>
                 </div>
                 {/* controls for next and prev buttons */}

@@ -1,3 +1,9 @@
+.main-title{
+  background-color: #f1f8e9;
+  padding: 55px;
+  font:bold;
+}
+
 
 .landing-page{
   background-color:#f1f8e9;
@@ -10,20 +16,19 @@
 
 .roundimg{
   border-radius: 8%;
+  width: 80%;
 
 }
 
 .col{
   color: #272343;
-  letter-spacing: 7px;
 }
 
 p{
-  letter-spacing: normal;
+  font-family: 'Fira Sans', sans-serif;
+  padding: 15px;
 }
 
 *{
   font-family: 'Varela Round', sans-serif;
-
-
 }
