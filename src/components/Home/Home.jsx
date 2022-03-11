@@ -27,6 +27,7 @@ function Home() {
     </div>  
     <Carousel></Carousel> 
     <Footer></Footer> 
+
   </div>
   );
 }

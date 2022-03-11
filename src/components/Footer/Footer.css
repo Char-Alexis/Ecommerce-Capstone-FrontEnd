@@ -1,8 +1,6 @@
-.links{
+.footer-links{
     text-align: center;
-    margin: 50px;
     background-color: #fffde7;
-    padding: 35px;
-    margin: 0;
+    box-shadow: 0 60vh 0 60vh #fffde7;
 }
 

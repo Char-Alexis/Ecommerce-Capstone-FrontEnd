@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer(){
     return(
-        <div className="links">
+        <div className="footer-links">
             <p>Thanks for visiting 💛</p>
             <p>Get in touch <ion-icon name="phone-portrait-outline"></ion-icon></p>
             <ion-icon name="logo-linkedin"></ion-icon>
