@@ -1,18 +1,27 @@
-/* .carousel-inner{
-    width: 100%;
-    display: block;
-    margin: 0 80px 30px 10em;
-    text-align: center;
-} */
+.containerCarousel{
+    padding: 50px;
+}
+
+.title{
+  text-decoration: underline;
+  text-decoration-thickness: 3px ;
+  background-color: #f1f8e9;
+  font-size: 200px;
+}
 
 
 #carouselSlider{
     width: 100%;
     display: block;
-    margin: 0 80px 30px 10em;
     text-align: center;
-
+    background-color: #f1f8e9;
 }
+
+.carousel-item {
+    height: 720px;
+    border-style: none;
+}
+
 
 .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {

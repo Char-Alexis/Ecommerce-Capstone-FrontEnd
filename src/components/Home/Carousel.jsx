@@ -4,7 +4,9 @@ import "./Carousel.css";
 
 function Slider() {
     return(
-        <div class="container">
+    <div class="title">
+      <h1>The Impact</h1>
+        <div class="containerCarousel">
                 {/* <div class="col-sm-12"> */}
                 <div id="carouselSlider" class="carousel slide" data-ride="carousel">
 
@@ -18,10 +20,6 @@ function Slider() {
                 <div class="carousel-inner" >
                     <div class="carousel-item active">
                     <img src="/images/plasticwaste.png" alt="First slide"/>
-                    <div class="carousel-caption">
-                        <h1>Plastic</h1>
-
-                    </div>
                     </div>
                     <div class="carousel-item">
                     <img  src="/images/sourcing.png" alt="Second slide"/>
@@ -43,11 +41,9 @@ function Slider() {
                     <span class="sr-only">Next</span>
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
-                    </div>
-            {/* </div> */}
+                </div>
+            </div>
         </div>
-
     )
-
 }
 export default Slider;
