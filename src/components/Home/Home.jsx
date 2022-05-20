@@ -17,15 +17,17 @@ function Home() {
         <img src="/images/facephoto.png" className="roundimg" />
       </div>
           <div class="col">
-          <h3>Lets Rethink Plastic</h3>
+          <h1>Lets Rethink Plastic</h1>
 
           <p>Part of my ongoing effort to shed light on reducing waste and improving sustainability efforts in packaging practices.</p>
           </div>
         </div>
       </div>
       
-    </div>  
+    </div>
+    
     <Carousel></Carousel> 
+
     <Footer></Footer> 
 
   </div>

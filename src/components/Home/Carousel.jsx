@@ -19,10 +19,10 @@ function Slider() {
                 {/* wrapper */}
                 <div class="carousel-inner" >
                     <div class="carousel-item active">
-                    <img src="/images/plasticwaste.png" alt="First slide"/>
+                    <img src="/images/plasticwaste2.png" alt="First slide"/>
                     </div>
                     <div class="carousel-item">
-                    <img  src="/images/sourcing.png" alt="Second slide"/>
+                    <img  src="/images/sourcing2.png" alt="Second slide"/>
                     <div class="carousel-caption d-none d-md-block">
                         <h1>Responsible Sourcing</h1>
                         <h3>We audit and research ecotoxicity and biodegradability of every ingredient</h3>
@@ -30,7 +30,7 @@ function Slider() {
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src="/images/co2.png" alt="Third slide"/>
+                    <img src="/images/co21.png" alt="Third slide"/>
                      <div class="carousel-caption d-none d-md-block">
                          <h1>CO2 emissions direct impact on global warming</h1>
                         <h3 className="top-left">Lets continue to reduce and offset the carbon footprint of product packaging and transportation!</h3>
