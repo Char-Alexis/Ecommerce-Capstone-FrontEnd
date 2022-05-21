@@ -5,6 +5,11 @@ import "./Home.css";
 
 function Home() {
   return (
+    <div>
+      <img src="/images/landing page.png" className="recycle" />
+
+  
+    
     <div class="main-title">
       <h1>More than skin deep</h1>
     <div className="landing-page">
@@ -31,6 +36,8 @@ function Home() {
     <Footer></Footer> 
 
   </div>
+  </div> 
+
   );
 }
 export default Home;
