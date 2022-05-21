@@ -34,3 +34,17 @@ img{
   height: auto;
   width: 98%;
 }
+
+.landing-page-heading{
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  top: 35%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 53%; /* Set the width of the positioned div */
+
+}
+
+.heading{
+  font-size: 6em;
+}

@@ -7,37 +7,29 @@ function Home() {
   return (
     <div>
       <img src="/images/landing page.png" className="recycle" />
-
-  
-    
-    <div class="main-title">
-      <h1>More than skin deep</h1>
-    <div className="landing-page">
-      <div className="container">
-        <div class="row">
-      <div class="col">
-        <img src="/images/serumphoto.png" className="roundimg"/>
-      </div>
-      <div class="col">
-        <img src="/images/facephoto.png" className="roundimg" />
-      </div>
-          <div class="col">
-          <h1>Lets Rethink Plastic</h1>
-
-          <p>Part of my ongoing effort to shed light on reducing waste and improving sustainability efforts in packaging practices.</p>
+        <div class="landing-page-heading">
+          <h1 className="heading">More than skin deep </h1>
+          <button> Shop Now</button>
           </div>
-        </div>
-      </div>
-      
-    </div>
-    
-    <Carousel></Carousel> 
-
-    <Footer></Footer> 
-
-  </div>
-  </div> 
-
-  );
+          <div className="landing-page">
+            <div className="container">
+              <div class="row">
+                <div class="col">
+                  <img src="/images/serumphoto.png" className="roundimg"/>
+                  </div>
+                  <div class="col">
+                    <img src="/images/facephoto.png" className="roundimg" />
+                    </div>
+                    <div class="col">
+                      <h1>Lets Rethink Plastic</h1>
+                      <p>Part of my ongoing effort to shed light on reducing waste and improving sustainability efforts in packaging practices.</p>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      <Carousel></Carousel> 
+                      <Footer></Footer>
+                      </div>
+);
 }
 export default Home;
