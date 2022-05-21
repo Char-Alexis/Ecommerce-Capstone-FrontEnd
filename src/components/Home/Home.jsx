@@ -9,9 +9,10 @@ function Home() {
       <img src="/images/landing page.png" className="recycle" />
         <div class="landing-page-heading">
           <h1 className="heading">More than skin deep </h1>
-          <button> Shop Now</button>
+          <button href='#'> Shop Now</button>
           </div>
           <div className="landing-page">
+            <h1 className="heading-two">Refill Revolution</h1>
             <div className="container">
               <div class="row">
                 <div class="col">

@@ -7,7 +7,7 @@
 
 
 .landing-page{
-  background-color: white;
+  background-color:#DAE5D0;
   padding: 85px;
 }
 
@@ -47,4 +47,46 @@ img{
 
 .heading{
   font-size: 6em;
+}
+
+.heading-two{
+  font-size: 4em;
+}
+
+button{
+  color: #141E27;
+  height: 3.5rem;
+  padding: 0 2rem;
+  border-radius: 0.375rem;
+  background-color: #FEFBE7;
+  box-shadow: 0 0.4rem 0 0 #A0BCC2;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+
+}
+
+button:active{
+  transform: translateY(0.3rem);
+  box-shadow: 0 0.2rem 0 0 #A0BCC2;
+}
+
+/* .btn::after, .btn::before{
+  border: 3px solid black;
+ content: ""; 
+  position: absolute; 
+ width: calc(100% - 6px);
+  height: calc(100% -6px); 
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover::after {
+  transform: translate(-5px, -5px);
+
+} */
+
+.btn:hover::before{
+  transform: translate(5px, 5px);
 }
