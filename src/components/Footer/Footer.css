@@ -1,5 +1,21 @@
 .footer-links{
     text-align: center;
     /* box-shadow: 0 60vh 0 60vh #fffde7; */
+    margin-bottom: 150px;
+    margin-top: 50px;
 }
 
+.font{
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.email{
+    text-decoration:none;
+    color: #A1B57D;
+}
+
+.linkElement{
+    padding-left: 10px; 
+    padding-right: 50px;
+}
