@@ -36,7 +36,9 @@ const ProductsListing = (props) => {
                
               <div class="container" >
                 <div key={product.id}>
-                <h1>Name: {product.product_name}</h1>
+                <h1>{product.product_name}</h1>
+                <p>${product.price}</p>
+
                   <p>
                     <NavLink to={`/details/${product.id}`}>View</NavLink>
                     
