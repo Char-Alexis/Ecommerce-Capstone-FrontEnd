@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReviewForm from "../ReviewForm/ReviewsForm";
-import { Card } from "react-bootstrap"
+
 
 function ProductDetails(props) {
   const [product, setProduct] = useState();
@@ -22,31 +22,22 @@ function ProductDetails(props) {
     console.log("product", product);
     return (
       <div>
-      <Card>
-      <div>
-          <Card.Body>
-            <div className="card"  >
-              <div className="d-inline-flex p-2">
+        <div className="container">
+          <div class= "row">
+            <div className="col">
               <h1>{product.product_name}</h1>
             </div>
-
-              </div >
-              <div className="">
-              <ul >
-             
-                <p className="text-center font-weight-light">{product.description}</p>
-                <p className="text-center font-weight-light">Skin Type:{product.category}</p>
-                <p className="text-center font-weight-light">Price:$'{product.price}</p>
-                
-              </ul>
-              </div>
-        </Card.Body>
+          </div>
+          <div className="col">
+            <ul>
+              <p>{product.description}</p>
+              <p>Skin Type:{product.category}</p>
+              <p>Price:${product.price}</p>
+            </ul>
+          </div>
       </div>
-
-      </Card>
-
-        <ReviewForm productId={params.id} user={props.user} />
-        </div>
+      <ReviewForm productId={params.id} user={props.user} />
+      </div>
     );
   }
 }
