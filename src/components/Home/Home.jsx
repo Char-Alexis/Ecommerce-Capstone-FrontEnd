@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Carousel from "./Carousel";
+import { Link } from "react-router-dom";
+
 import "./Home.css";
 
 function Home() {
@@ -10,7 +12,9 @@ function Home() {
         <div class="landing-page-heading">
           <h1 className="heading">More than skin deep </h1>
           <div className="btn">
-          <button href='#' className="button"> Shop Now</button>
+            <Link as={Link} to="/products">
+          <button href='#products' className="button"> Shop Now</button>
+            </Link>
           </div>
           </div>
           <div className="landing-page">
