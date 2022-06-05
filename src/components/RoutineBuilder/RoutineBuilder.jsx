@@ -31,10 +31,10 @@ function RoutineBuilder({userPreferences, handleUserPreferences }) {
       question: 'Where do you call home?',
       options: [
 
-        { text: 'City Dweller', isCorrect: false,type:"userGoals" },
-        { text: 'Sunny & Humid', isCorrect: false,type:"userGoals" },
-        { text: 'Continental with very hot summers and cold winters', isCorrect: false,type:"userGoals" },
-        { text: 'Cold and dry year round', isCorrect: false,type:"userGoals" },
+        { text: 'City Dweller', isCorrect: false,type:"" },
+        { text: 'Sunny & Humid', isCorrect: false,type:"" },
+        { text: 'Continental with very hot summers and cold winters', isCorrect: false,type:"" },
+        { text: 'Cold and dry year round', isCorrect: false,type:"" },
 
       ],
     }

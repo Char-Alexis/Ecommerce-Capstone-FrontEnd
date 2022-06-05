@@ -36,6 +36,25 @@ function ProductDetails(props) {
             </ul>
           </div>
       </div>
+      <p>Refill, Reuse, Repeat</p>
+        {/* <div class="container"> */}
+          <div class="row">
+            <div class="col">
+              <img src="/images/1.png" className="content" /> 
+              Love them 
+            </div>
+            <div class="col">
+              <img src="/images/2.png" className="content" /> 
+
+              Done? We'll pick up. 
+            </div>
+            <div class="col">
+              <img src="/images/3.png" className="content" /> 
+
+              Cleaned, refilled, delivered - repeat.
+            </div>
+          {/* </div> */}
+      </div>
       <ReviewForm productId={params.id} user={props.user} />
       </div>
     );
