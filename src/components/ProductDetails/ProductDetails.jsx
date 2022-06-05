@@ -32,7 +32,7 @@ function ProductDetails(props) {
             <ul>
               <p>{product.description}</p>
               <p>Skin Type:{product.category}</p>
-              <p>Price:${product.price}</p>
+              <button>Add to Cart | ${product.price}</button>
             </ul>
           </div>
       </div>
