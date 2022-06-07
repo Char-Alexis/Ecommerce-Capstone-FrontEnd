@@ -1,7 +1,8 @@
 .containerCarousel{
   padding: 30px;
   /* max-height: 625px; */
-  
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
 }
 
 .title{
@@ -11,17 +12,22 @@
   font-size: 200px;
 }
 
-
+/* 
 #carouselSlider{
-    width: 100%;
-    display: block;
-    text-align: center;
-    background-color: white;
-}
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: white;
+
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
+} */
 
 .carousel-item {
-    /* height: 720px; */
-    border-style: none;
+  /* height: 720px; */
+  border-style: none;
+
+  scroll-snap-align: start;
 
 }
 

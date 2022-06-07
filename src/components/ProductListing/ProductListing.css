@@ -36,3 +36,13 @@
 .box-1{
   flex:2;
 }
+
+.quick-add-btn{
+  color: black;
+  height: 2rem;
+  padding: 20 10px;
+  border-radius: 8px;
+  background-color: #FEFBE7;
+  letter-spacing: 3px;
+  margin: 40px;
+}

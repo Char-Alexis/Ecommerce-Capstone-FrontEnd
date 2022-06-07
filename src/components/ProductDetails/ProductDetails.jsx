@@ -63,8 +63,8 @@ function ProductDetails(props) {
             </div>
           </div>
       </div>
-      <ReviewForm productId={params.id} user={props.user} />
       <Scrolling />
+      <ReviewForm productId={params.id} user={props.user} />
       </div>
     );
   }

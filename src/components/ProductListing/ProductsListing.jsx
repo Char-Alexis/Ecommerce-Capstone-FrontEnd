@@ -42,7 +42,7 @@ const ProductsListing = (props) => {
                   <p>
                     <NavLink to={`/details/${product.id}`}>View</NavLink>
                     
-                    <button type = "button" class="btn btn-light" onClick={onClickAddToCart}  >Add to Cart</button>
+                    <button type = "button" className="quick-add-btn" onClick={onClickAddToCart}  >Quick Add</button>
                   </p>
                 </div>
               </div>
